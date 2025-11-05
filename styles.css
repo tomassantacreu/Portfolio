@@ -32,12 +32,11 @@ body {
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 1.5rem;
@@ -46,7 +45,20 @@ body {
   box-sizing: border-box;
   background: url("/images/w.png") no-repeat center center;
   background-size: cover;
-  overflow: hidden;
+}
+
+/* Solo las secciones que querés centradas verticalmente */
+#intro,
+#sobre-mi {
+  justify-content: center;
+}
+
+/* En las secciones largas, el contenido se acomoda arriba naturalmente */
+#mis-trabajos,
+#contacto {
+  justify-content: flex-start;
+  padding-top: 80px; /* un poco de aire arriba */
+  padding-bottom: 60px;
 }
 
 /* ==============================
