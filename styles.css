@@ -1,0 +1,465 @@
+/* ==============================
+   BASE
+============================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  background: #1e1a20;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  /* Ocultar scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 12px;
+  box-sizing: border-box;
+  background: url("/images/w.png") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* ==============================
+   INTRO
+============================== */
+#intro img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+#intro h1 {
+  color: #1fbccf;
+  margin: 10px 0;
+}
+
+/* ==============================
+   SOBRE MÍ
+============================== */
+#sobre-mi p {
+  margin: 10px 0;
+  max-width: 700px;
+}
+
+#sobre-mi div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+#sobre-mi img {
+  width: 50px;
+  height: auto;
+}
+
+#sobre-mi button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #1fbccf;
+  color: #1e1a20;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#sobre-mi button:hover {
+  background: #17aabf;
+}
+
+/* ==============================
+   TRABAJOS
+============================== */
+.trabajos-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.trabajo {
+  max-width: 45%;
+}
+
+.trabajo a img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+/* ==============================
+   SCROLL DOTS
+============================== */
+.scroll-dots {
+  position: fixed;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 99999;
+  pointer-events: auto;
+}
+
+.scroll-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.scroll-dots span.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+/* ==============================
+   CONTACTO
+============================== */
+#contacto {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  background: #313131;
+  width: 90%;
+  border-radius: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: #1fbccf;
+  margin-left: 10px;
+}
+
+.card-text p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.5rem;
+}
+
+.link-button {
+  padding: 10px;
+  border-radius: 8px;
+  background: #1fbccf;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #1e1a20;
+}
+
+/* ==============================
+   MEDIA QUERIES
+============================== */
+
+/* >=1080px */
+@media (min-width: 1080px) {
+  #sobre-mi p {
+    font-size: 2rem;
+  }
+}
+
+/* ESCRITORIO >=1025px */
+@media (min-width: 1025px) {
+  .section {
+    background: url("/images/bg.png") repeat;
+    background-size: 60%;
+  }
+
+  #intro img {
+    width: 100%;
+  }
+
+  #intro h1 {
+    font-size: 4rem;
+  }
+
+  #intro p {
+    font-size: 2.3rem;
+  }
+
+  #sobre-mi p {
+    font-size: 1.7rem;
+  }
+
+  #sobre-mi img {
+    width: 80px;
+  }
+
+  #sobre-mi button {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 40px;
+    padding: 16px 24px;
+  }
+
+  .trabajos-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trabajo {
+    max-width: 24%;
+  }
+
+  .trabajo a img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+  }
+
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    width: 30%;
+    border: solid rgba(255, 255, 255, 0.068);
+  }
+
+  .link-button {
+    border-radius: 8px;
+    background: #1fbccf;
+    text-decoration: none;
+    color: #1e1a20;
+  }
+
+  .contact-card a p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .contact-card a i {
+    display: none;
+  }
+
+  .card-icon {
+    font-size: 5rem;
+  }
+
+  .card-text p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 15px;
+  }
+
+  .email {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 15px;
+  }
+
+  .email p {
+    margin: 0;
+  }
+
+  .link-button {
+    font-size: 2.8rem;
+  }
+
+  .scroll-dots {
+    right: 25px;
+  }
+}
+
+/* TABLETS <=1024px */
+@media (max-width: 1024px) {
+  #intro img {
+    width: 100%;
+  }
+
+  #intro h1 {
+    font-size: 5rem;
+  }
+
+  #intro p {
+    font-size: 3rem;
+  }
+
+  #sobre-mi p {
+    font-size: 2.2rem;
+  }
+
+  #sobre-mi img {
+    width: 100px;
+  }
+
+  #sobre-mi button {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin: 40px;
+    padding: 20px 30px;
+  }
+
+  .trabajo {
+    max-width: 45%;
+  }
+  .contact-card a p {
+    margin: 0;
+    display: none;
+  }
+
+  .card-icon {
+    font-size: 5rem;
+  }
+
+  .card-text p {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  .email {
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+
+  .link-button {
+    font-size: 2.8rem;
+  }
+
+  .scroll-dots {
+    right: 15px;
+  }
+}
+
+/* MÓVILES <=767px */
+@media (max-width: 767px) {
+  #intro img {
+    width: 100%;
+  }
+
+  #intro h1 {
+    font-size: 2rem;
+  }
+  #intro p {
+    font-size: 1.5rem;
+  }
+
+  #sobre-mi p {
+    font-size: 1.2rem;
+    max-width: 95%;
+  }
+
+  #sobre-mi img {
+    width: 60px;
+  }
+
+  #sobre-mi button {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 40px;
+    padding: 16px 26px;
+  }
+
+  .trabajo {
+    max-width: 45%;
+  }
+  .contact-card a p {
+    margin: 0;
+    display: none;
+  }
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .card-text p {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .email {
+    font-weight: 600;
+    font-size: 0.72rem;
+  }
+
+  .link-button {
+    font-size: 1.2rem;
+  }
+
+  .scroll-dots {
+    right: 10px;
+  }
+}
+
+/* ==============================
+   ENLACES HOVER
+============================== */
+a {
+  transition: background 0.3s, filter 0.3s;
+}
+
+a:hover {
+  filter: brightness(0.8);
+}
+
+a img {
+  transition: filter 0.3s;
+}
+
+a:hover img {
+  filter: brightness(0.8);
+}
+
+.link-button:hover,
+#sobre-mi a:hover button {
+  background: #17aabf;
+  filter: brightness(0.9);
+}
