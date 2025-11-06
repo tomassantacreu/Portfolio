@@ -161,41 +161,44 @@ body {
 /* ==============================
    CONTACTO
 ============================== */
-/* Centrado vertical de la sección Contacto */
-.contacto-section {
-  min-height: 100vh; /* ocupa toda la altura de la pantalla */
+#contacto {
+  min-height: 100vh; /* ocupa toda la altura visible */
+  padding-top: clamp(2rem, 10vh, 6rem); /* margen adaptable */
+  padding-bottom: clamp(2rem, 10vh, 6rem);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra verticalmente */
-  align-items: center; /* centra horizontalmente */
+  align-items: center;
+  justify-content: center; /* centrado vertical */
   text-align: center;
   box-sizing: border-box;
 }
 
-/* Asegura que no haya márgenes raros */
-.contacto-section h1 {
-  margin-bottom: 1rem;
+#contacto h1 {
+  margin: 0 0 1rem 0;
 }
 
-/* Ajustes para el contenedor interno */
-.card-container {
+#contacto .card-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   width: 100%;
   max-width: 400px;
+  box-sizing: border-box;
 }
+
+/* Tarjetas individuales */
 .contact-card {
   display: flex;
   flex-direction: row;
-  margin: 10px 0px;
   justify-content: space-between;
   align-items: center;
   background: #313131;
   width: 90%;
   border-radius: 16px;
   padding: 10px;
+  margin: 10px 0;
   box-sizing: border-box;
 }
 
@@ -208,7 +211,7 @@ body {
 .card-text p {
   margin: 0;
   font-weight: 500;
-  font-size: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .link-button {
