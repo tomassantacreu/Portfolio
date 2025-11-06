@@ -174,6 +174,7 @@ body {
 #contacto h1 {
   margin-bottom: 20px;
   margin-top: 0;
+  border: 2px solid red;
 }
 
 #contacto .card-container {
@@ -188,6 +189,7 @@ body {
 }
 .contact-card {
   display: flex;
+  display: none;
   flex-direction: row;
   margin: 10px 0px;
   justify-content: space-between;
