@@ -162,16 +162,25 @@ body {
    CONTACTO
 ============================== */
 #contacto {
-  text-align: center;
-  justify-content: flex-start;
-  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;
+  height: 100%; /* asegura usar todo el alto de la sección */
+  padding: 0; /* elimina posibles empujes */
+  box-sizing: border-box;
 }
 
-.card-container {
+#contacto .card-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* centra el grupo completo */
+  gap: 20px;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .contact-card {
