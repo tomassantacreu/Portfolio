@@ -162,19 +162,18 @@ body {
    CONTACTO
 ============================== */
 #contacto {
+  padding-top: clamp(2rem, 20vh, 6rem); /* se adapta al alto de la pantalla */
+  padding-bottom: clamp(2rem, 20vh, 6rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex: 1;
-  min-height: 100%;
+  justify-content: start; /* empieza un poco más arriba */
   box-sizing: border-box;
-  overflow: hidden; /* asegura que no rompa el centrado */
 }
+
 #contacto h1 {
   margin-bottom: 20px;
   margin-top: 0;
-  border: 2px solid red;
 }
 
 #contacto .card-container {
@@ -189,7 +188,6 @@ body {
 }
 .contact-card {
   display: flex;
-  display: none;
   flex-direction: row;
   margin: 10px 0px;
   justify-content: space-between;
