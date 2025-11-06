@@ -163,6 +163,8 @@ body {
 ============================== */
 #contacto {
   text-align: center;
+  justify-content: flex-start;
+  padding-top: 40px;
 }
 
 .card-container {
