@@ -162,35 +162,30 @@ body {
    CONTACTO
 ============================== */
 #contacto {
-  min-height: 100vh; /* ocupa toda la altura visible */
+  min-height: 100vh; /* ocupa toda la altura del viewport */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra verticalmente todo */
   align-items: center;
+  justify-content: center; /* centra vertical y horizontalmente */
   text-align: center;
   box-sizing: border-box;
-  padding: clamp(2rem, 10vh, 6rem) 0;
+  padding: clamp(2rem, 10vh, 6rem) 1rem; /* márgenes adaptativos */
 }
 
-/* Título */
 #contacto h1 {
-  margin-bottom: 20px;
-  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
-/* Contenedor de tarjetas */
 #contacto .card-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra internamente las tarjetas */
   align-items: center;
-  gap: 20px;
+  justify-content: center; /* centra internamente */
+  gap: 1.2rem;
   width: 100%;
   max-width: 400px;
-  box-sizing: border-box;
 }
 
-/* Tarjetas */
 .contact-card {
   display: flex;
   flex-direction: row;
@@ -200,18 +195,15 @@ body {
   width: 90%;
   border-radius: 16px;
   padding: 10px;
-  margin: 10px 0;
   box-sizing: border-box;
 }
 
-/* Iconos */
 .card-icon {
   font-size: 2.5rem;
   color: #1fbccf;
   margin-left: 10px;
 }
 
-/* Texto */
 .card-text p {
   margin: 0;
   font-weight: 500;
@@ -219,6 +211,9 @@ body {
 }
 
 .link-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 10px;
   border-radius: 8px;
   background: #1fbccf;
