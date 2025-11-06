@@ -170,6 +170,10 @@ body {
   padding: 0; /* elimina posibles empujes */
   box-sizing: border-box;
 }
+#contacto h1 {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
 
 #contacto .card-container {
   display: flex;
