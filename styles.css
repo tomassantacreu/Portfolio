@@ -46,12 +46,22 @@ body {
   box-sizing: border-box;
   background: url("/images/w.png") no-repeat center center;
   background-size: cover;
+
+  /* 🔧 Ajuste mobile */
+  justify-content: center;
 }
 
 /* Solo las secciones que querés centradas verticalmente */
 #intro,
 #sobre-mi {
   justify-content: center;
+}
+
+/* 🔧 Extra: prevenir desalineación por notch o barra del navegador */
+@supports (height: 100dvh) {
+  .section {
+    min-height: 100dvh;
+  }
 }
 
 /* En las secciones largas, el contenido se acomoda arriba naturalmente */
