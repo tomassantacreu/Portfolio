@@ -141,18 +141,6 @@
 
     <!-- Scroll dots -->
     <div class="scroll-dots"></div>
-    <script>
-        // 🔧 Corrige 100vh en móviles (problema común)
-        function fixMobileHeight() {
-            const vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-        window.addEventListener('resize', fixMobileHeight);
-        window.addEventListener('orientationchange', fixMobileHeight);
-        fixMobileHeight();
-    </script>
-
-    <script src="script.js"></script>
 </body>
 
 </html>

@@ -32,12 +32,12 @@ body {
 }
 
 .section {
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100vh;
   width: 100%;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 1.5rem;
@@ -46,30 +46,7 @@ body {
   box-sizing: border-box;
   background: url("/images/w.png") no-repeat center center;
   background-size: cover;
-
-  /* 🔧 Ajuste mobile */
-  justify-content: center;
-}
-
-/* Solo las secciones que querés centradas verticalmente */
-#intro,
-#sobre-mi {
-  justify-content: center;
-}
-
-/* 🔧 Extra: prevenir desalineación por notch o barra del navegador */
-@supports (height: 100dvh) {
-  .section {
-    min-height: 100dvh;
-  }
-}
-
-/* En las secciones largas, el contenido se acomoda arriba naturalmente */
-#mis-trabajos,
-#contacto {
-  justify-content: flex-start;
-  padding-top: 80px; /* un poco de aire arriba */
-  padding-bottom: 60px;
+  overflow: hidden;
 }
 
 /* ==============================
@@ -405,11 +382,6 @@ body {
 
 /* MÓVILES <=767px */
 @media (max-width: 767px) {
-  .section {
-    min-height: calc(var(--vh, 1vh) * 100);
-    justify-content: center;
-  }
-
   #intro img {
     width: 100%;
   }
