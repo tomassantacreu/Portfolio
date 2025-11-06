@@ -405,6 +405,11 @@ body {
 
 /* MÓVILES <=767px */
 @media (max-width: 767px) {
+  .section {
+    min-height: calc(var(--vh, 1vh) * 100);
+    justify-content: center;
+  }
+
   #intro img {
     width: 100%;
   }

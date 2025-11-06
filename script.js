@@ -38,6 +38,3 @@ dotsContainer.addEventListener('click', e => {
     sections[index].scrollIntoView({ behavior: 'smooth' });
   }
 });
-
-
-
