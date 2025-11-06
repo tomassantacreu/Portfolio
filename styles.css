@@ -164,11 +164,12 @@ body {
 #contacto {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra verticalmente */
+  justify-content: center;
   align-items: center;
-  height: 100%; /* asegura usar todo el alto de la sección */
-  padding: 0; /* elimina posibles empujes */
+  flex: 1;
+  min-height: 100%;
   box-sizing: border-box;
+  overflow: hidden; /* asegura que no rompa el centrado */
 }
 #contacto h1 {
   margin-bottom: 20px;
@@ -178,15 +179,13 @@ body {
 #contacto .card-container {
   display: flex;
   flex-direction: column;
+  justify-content: center; /* centra las tarjetas */
   align-items: center;
-  justify-content: center; /* centra el grupo completo */
   gap: 20px;
   width: 100%;
-  margin: 0;
-  padding: 0;
+  max-height: 80vh; /* evita que sobrepase la pantalla */
   box-sizing: border-box;
 }
-
 .contact-card {
   display: flex;
   flex-direction: row;
