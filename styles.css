@@ -162,14 +162,9 @@ body {
    CONTACTO
 ============================== */
 #contacto {
-  min-height: 100vh; /* ocupa toda la altura del viewport */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* centra vertical y horizontalmente */
-  text-align: center;
+  width: 100%;
+  padding: clamp(2rem, 8vh, 4rem) 1rem;
   box-sizing: border-box;
-  padding: clamp(2rem, 10vh, 6rem) 1rem; /* márgenes adaptativos */
 }
 
 #contacto h1 {
@@ -180,15 +175,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* centra internamente */
-  gap: 1.2rem;
+  gap: 1rem;
   width: 100%;
   max-width: 400px;
 }
 
 .contact-card {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background: #313131;
