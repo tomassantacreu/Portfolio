@@ -34,7 +34,7 @@ body {
 .section {
   height: 100vh;
   width: 100%;
-  scroll-snap-align: start;
+  scroll-snap-align: end;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,6 +48,10 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+.section h1 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
 
 /* ==============================
    INTRO
@@ -60,7 +64,8 @@ body {
 
 #intro h1 {
   color: #1fbccf;
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* ==============================
@@ -84,7 +89,8 @@ body {
   height: auto;
 }
 
-#sobre-mi button {
+#sobre-mi a {
+  text-decoration: none;
   margin-top: 20px;
   padding: 12px 25px;
   border: none;
@@ -92,11 +98,12 @@ body {
   background: #1fbccf;
   color: #1e1a20;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 }
 
-#sobre-mi button:hover {
+#sobre-mi a:hover {
   background: #17aabf;
 }
 
