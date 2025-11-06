@@ -161,30 +161,30 @@ body {
 /* ==============================
    CONTACTO
 ============================== */
-#contacto {
-  padding-top: clamp(2rem, 20vh, 6rem); /* se adapta al alto de la pantalla */
-  padding-bottom: clamp(2rem, 20vh, 6rem);
+/* Centrado vertical de la sección Contacto */
+.contacto-section {
+  min-height: 100vh; /* ocupa toda la altura de la pantalla */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: start; /* empieza un poco más arriba */
+  justify-content: center; /* centra verticalmente */
+  align-items: center; /* centra horizontalmente */
+  text-align: center;
   box-sizing: border-box;
 }
 
-#contacto h1 {
-  margin-bottom: 20px;
-  margin-top: 0;
+/* Asegura que no haya márgenes raros */
+.contacto-section h1 {
+  margin-bottom: 1rem;
 }
 
-#contacto .card-container {
+/* Ajustes para el contenedor interno */
+.card-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra las tarjetas */
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
   width: 100%;
-  max-height: 80vh; /* evita que sobrepase la pantalla */
-  box-sizing: border-box;
+  max-width: 400px;
 }
 .contact-card {
   display: flex;
@@ -218,31 +218,6 @@ body {
   text-decoration: none;
   font-size: 1rem;
   color: #1e1a20;
-}
-/* Centrado vertical de la sección Contacto */
-.contacto-section {
-  min-height: 100vh; /* ocupa toda la altura de la pantalla */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centra verticalmente */
-  align-items: center; /* centra horizontalmente */
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* Asegura que no haya márgenes raros */
-.contacto-section h1 {
-  margin-bottom: 1rem;
-}
-
-/* Ajustes para el contenedor interno */
-.card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  max-width: 400px;
 }
 
 /* ==============================
