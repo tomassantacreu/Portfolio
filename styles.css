@@ -219,6 +219,31 @@ body {
   font-size: 1rem;
   color: #1e1a20;
 }
+/* Centrado vertical de la sección Contacto */
+.contacto-section {
+  min-height: 100vh; /* ocupa toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center; /* centra horizontalmente */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Asegura que no haya márgenes raros */
+.contacto-section h1 {
+  margin-bottom: 1rem;
+}
+
+/* Ajustes para el contenedor interno */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
 
 /* ==============================
    MEDIA QUERIES
