@@ -406,6 +406,65 @@ body {
   }
 }
 
+/* MÓVILES <=767px */
+@media (max-width: 767px) {
+  #intro img {
+    width: 100%;
+  }
+
+  #intro h1 {
+    font-size: 2rem;
+  }
+  #intro p {
+    font-size: 1.5rem;
+  }
+
+  #sobre-mi p {
+    font-size: 1.2rem;
+    max-width: 95%;
+  }
+
+  #sobre-mi img {
+    width: 60px;
+  }
+
+  #sobre-mi a {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 40px;
+    padding: 16px 26px;
+  }
+
+  .trabajo {
+    max-width: 45%;
+  }
+  .contact-card a p {
+    margin: 0;
+    display: none;
+  }
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .card-text p {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .email {
+    font-weight: 600;
+    font-size: 0.72rem;
+  }
+
+  .link-button {
+    font-size: 1.2rem;
+  }
+
+  .scroll-dots {
+    right: 10px;
+  }
+}
+
 /* ==============================
    ENLACES HOVER
 ============================== */
