@@ -276,13 +276,14 @@ body {
     height: auto;
   }
 
-  .card-container {
+  #contacto .card-container {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
   }
 
   .contact-card {
@@ -358,7 +359,7 @@ body {
     width: 100px;
   }
 
-  #sobre-mi button {
+  #sobre-mi a {
     font-weight: 700;
     font-size: 2.2rem;
     margin: 40px;
@@ -367,6 +368,15 @@ body {
 
   .trabajo {
     max-width: 45%;
+  }
+  #contacto .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100vw;
+    max-width: 100%;
   }
   .contact-card a p {
     margin: 0;
@@ -393,65 +403,6 @@ body {
 
   .scroll-dots {
     right: 15px;
-  }
-}
-
-/* MÓVILES <=767px */
-@media (max-width: 767px) {
-  #intro img {
-    width: 100%;
-  }
-
-  #intro h1 {
-    font-size: 2rem;
-  }
-  #intro p {
-    font-size: 1.5rem;
-  }
-
-  #sobre-mi p {
-    font-size: 1.2rem;
-    max-width: 95%;
-  }
-
-  #sobre-mi img {
-    width: 60px;
-  }
-
-  #sobre-mi button {
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin: 40px;
-    padding: 16px 26px;
-  }
-
-  .trabajo {
-    max-width: 45%;
-  }
-  .contact-card a p {
-    margin: 0;
-    display: none;
-  }
-  .card-icon {
-    font-size: 2.5rem;
-  }
-
-  .card-text p {
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-
-  .email {
-    font-weight: 600;
-    font-size: 0.72rem;
-  }
-
-  .link-button {
-    font-size: 1.2rem;
-  }
-
-  .scroll-dots {
-    right: 10px;
   }
 }
 
