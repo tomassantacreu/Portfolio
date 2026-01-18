@@ -44,7 +44,7 @@ body {
   color: #fff;
   padding: 12px;
   box-sizing: border-box;
-  background: url("/images/w.png") no-repeat center center;
+  background: url("/images/w.svg") no-repeat center center;
   background-size: cover;
   overflow: hidden;
 }
@@ -255,7 +255,7 @@ body {
 /* ESCRITORIO >=1025px */
 @media (min-width: 1025px) {
   .section {
-    background: url("/images/bg.png") repeat;
+    background: url("/images/w.svg") repeat;
     background-size: 60%;
   }
 
