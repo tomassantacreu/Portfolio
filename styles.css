@@ -42,7 +42,7 @@ body {
   text-align: center;
   font-size: 1.5rem;
   color: #fff;
-  padding: 12px;
+  padding: 28px;
   box-sizing: border-box;
   background: url("/images/w.svg") no-repeat center center;
   background-size: cover;
@@ -64,7 +64,7 @@ body {
 }
 
 #intro h1 {
-  color: #1fbccf;
+  color: #3587da;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -163,7 +163,6 @@ body {
 ============================== */
 #contacto {
   width: 100%;
-  padding: clamp(2rem, 8vh, 4rem) 1rem;
   box-sizing: border-box;
 }
 
@@ -184,47 +183,33 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #313131;
-  width: 90%;
-  border-radius: 16px;
-  padding: 10px;
+  background: linear-gradient(
+    -70deg ,
+    #073565 0%,
+    #8CC5FF 30%,
+    #8CC5FF 45%,
+    #073565 85%
+  );
+  width: 100%;
+  height: 72px;
+  border: 1.3px solid rgba(140, 197, 255, 0.4);
+  border-radius: 12px;
+  padding: 0px 24px;
   box-sizing: border-box;
 }
+.contact-card p{
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+ }
 
-.card-icon {
-  font-size: 2.5rem;
-  color: #1fbccf;
-  margin-left: 10px;
-}
+.contact-card {
+text-decoration: none;}
 
-.card-text p {
-  margin: 0;
-  font-weight: 500;
-  font-size: 0.9rem;
-}
 
-.link-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px;
-  border-radius: 8px;
-  background: #1fbccf;
-  text-decoration: none;
-  font-size: 1rem;
-  color: #1e1a20;
-}
 
-/* Centrado vertical de la sección Contacto */
-.contacto-section {
-  min-height: 100vh; /* ocupa toda la altura de la pantalla */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centra verticalmente */
-  align-items: center; /* centra horizontalmente */
-  text-align: center;
-  box-sizing: border-box;
-}
+
+
 
 /* Asegura que no haya márgenes raros */
 .contacto-section h1 {
