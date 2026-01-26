@@ -64,9 +64,13 @@ body {
 }
 
 #intro h1 {
-  color: #3587da;
+ background: linear-gradient(90deg, #8CC5FF, #0b56a7, #8CC5FF );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-top: 10px;
   margin-bottom: 10px;
+  
 }
 
 /* ==============================
@@ -75,6 +79,7 @@ body {
 #sobre-mi p {
   margin: 10px 0;
   max-width: 700px;
+
 }
 
 #sobre-mi div {
@@ -96,10 +101,11 @@ body {
   padding: 12px 25px;
   border: none;
   border-radius: 8px;
-  background: #1fbccf;
-  color: #1e1a20;
+  background: #073565; 
+  border: 1.3px solid rgba(140, 197, 255, 0.4);
+  color: #8CC5FF;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -428,7 +434,7 @@ text-decoration: none;}
   }
 
   #sobre-mi p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     max-width: 95%;
   }
 
