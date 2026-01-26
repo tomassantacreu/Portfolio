@@ -197,6 +197,7 @@ body {
   padding: 0px 24px;
   box-sizing: border-box;
 }
+
 .contact-card p{
   color: white;
   font-size: 28px;
@@ -205,10 +206,6 @@ body {
 
 .contact-card {
 text-decoration: none;}
-
-
-
-
 
 
 /* Asegura que no haya márgenes raros */
