@@ -16,42 +16,49 @@ body {
   overflow-y: hidden;
 }
 
+/* ==============================
+   CONTENEDOR PRINCIPAL
+============================== */
 .container {
   height: 100vh;
   width: 100%;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 
-  /* Ocultar scrollbar */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
+/* ==============================
+   SECCIONES GENERALES
+============================== */
 .section {
   height: 100dvh;
   width: 100%;
   scroll-snap-align: start;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  font-size: 1.5rem;
-  color: #fff;
+
   padding: 28px;
   box-sizing: border-box;
-  background: url("/images/w.svg") no-repeat center center;
+  text-align: center;
+
+  font-size: 1.5rem;
+  color: #fff;
+
+  background: url("/images/w.svg") no-repeat center;
   background-size: cover;
-  overflow: hidden;
 }
 
 .section h1 {
-  margin-top: 0px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 /* ==============================
@@ -64,13 +71,10 @@ body {
 }
 
 #intro h1 {
- background: linear-gradient(90deg, #8CC5FF, #0b56a7, #8CC5FF );
-  -webkit-background-clip: text;
+  background: linear-gradient(90deg, #8cc5ff, #0b56a7, #8cc5ff);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  
 }
 
 /* ==============================
@@ -79,7 +83,6 @@ body {
 #sobre-mi p {
   margin: 10px 0;
   max-width: 700px;
-
 }
 
 #sobre-mi div {
@@ -92,21 +95,21 @@ body {
 
 #sobre-mi img {
   width: 50px;
-  height: auto;
 }
 
 #sobre-mi a {
-  text-decoration: none;
   margin-top: 20px;
   padding: 12px 25px;
-  border: none;
+
   border-radius: 8px;
-  background: #073565; 
   border: 1.3px solid rgba(140, 197, 255, 0.4);
-  color: #8CC5FF;
+
+  background: #073565;
+  color: #8cc5ff;
+  text-decoration: none;
+
   font-size: 1rem;
   font-weight: 700;
-  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -119,7 +122,6 @@ body {
 ============================== */
 .trabajos-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
@@ -129,10 +131,61 @@ body {
   max-width: 45%;
 }
 
-.trabajo a img {
+.trabajo img {
   width: 100%;
   border-radius: 10px;
-  height: auto;
+}
+
+/* ==============================
+   CONTACTO
+============================== */
+#contacto h1 {
+  margin-bottom: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 72px;
+  padding: 0 24px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    -70deg,
+    #073565 0%,
+    #8cc5ff 30%,
+    #8cc5ff 45%,
+    #073565 85%
+  );
+
+  border: 1.3px solid rgba(140, 197, 255, 0.4);
+  border-radius: 12px;
+
+  text-decoration: none;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.card-icon {
+  width: 32px;
 }
 
 /* ==============================
@@ -143,11 +196,12 @@ body {
   top: 50%;
   right: 25px;
   transform: translateY(-50%);
+
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   z-index: 99999;
-  pointer-events: auto;
 }
 
 .scroll-dots span {
@@ -156,7 +210,7 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .scroll-dots span.active {
@@ -165,90 +219,12 @@ body {
 }
 
 /* ==============================
-   CONTACTO
-============================== */
-#contacto {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#contacto h1 {
-  margin-bottom: 1.5rem;
-}
-
-#contacto .card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  max-width: 400px;
-}
-
-.contact-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(
-    -70deg ,
-    #073565 0%,
-    #8CC5FF 30%,
-    #8CC5FF 45%,
-    #073565 85%
-  );
-  width: 100%;
-  height: 72px;
-  border: 1.3px solid rgba(140, 197, 255, 0.4);
-  border-radius: 12px;
-  padding: 0px 24px;
-  box-sizing: border-box;
-}
-
-.contact-card p{
-  color: white;
-  font-size: 28px;
-  font-weight: 600;
- }
-
-.contact-card {
-text-decoration: none;}
-
-
-/* Asegura que no haya márgenes raros */
-.contacto-section h1 {
-  margin-bottom: 1rem;
-}
-
-/* Ajustes para el contenedor interno */
-.card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  max-width: 400px;
-}
-
-/* ==============================
    MEDIA QUERIES
 ============================== */
-
-/* >=1080px */
-@media (min-width: 1080px) {
-  #sobre-mi p {
-    font-size: 2rem;
-  }
-}
-
-/* ESCRITORIO >=1025px */
 @media (min-width: 1025px) {
   .section {
-    background: url("/images/w.svg") repeat;
+    background-repeat: repeat;
     background-size: 60%;
-  }
-
-  #intro img {
-    width: 100%;
   }
 
   #intro h1 {
@@ -267,168 +243,28 @@ text-decoration: none;}
     width: 80px;
   }
 
-  #sobre-mi button {
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin: 40px;
-    padding: 16px 24px;
-  }
-
-  .trabajos-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .trabajo {
     max-width: 24%;
   }
 
-  .trabajo a img {
-    width: 100%;
-    border-radius: 10px;
-    height: auto;
-  }
-
-  #contacto .card-container {
-    flex-direction: row;
+  .card-container {
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    gap: 20px;
-    width: 100vw;
     max-width: 100%;
   }
 
   .contact-card {
-    flex-direction: column;
     width: 30%;
-    border: solid rgba(255, 255, 255, 0.068);
-  }
 
-  .link-button {
-    border-radius: 8px;
-    background: #1fbccf;
-    text-decoration: none;
-    color: #1e1a20;
-  }
-
-  .contact-card a p {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-
-  .contact-card a i {
-    display: none;
-  }
-
-  .card-icon {
-    font-size: 5rem;
-  }
-
-  .card-text p {
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin: 15px;
-  }
-
-  .email {
-    font-weight: 600;
-    font-size: 1.4rem;
-    margin: 15px;
-  }
-
-  .email p {
-    margin: 0;
-  }
-
-  .link-button {
-    font-size: 2.8rem;
-  }
-
-  .scroll-dots {
-    right: 25px;
   }
 }
 
-/* TABLETS <=1024px */
-@media (max-width: 1024px) {
-  #intro img {
-    width: 100%;
-  }
-
-  #intro h1 {
-    font-size: 5rem;
-  }
-
-  #intro p {
-    font-size: 3rem;
-  }
-
-  #sobre-mi p {
-    font-size: 2.2rem;
-  }
-
-  #sobre-mi img {
-    width: 100px;
-  }
-
-  #sobre-mi a {
-    font-weight: 700;
-    font-size: 2.2rem;
-    margin: 40px;
-    padding: 20px 30px;
-  }
-
-  .trabajo {
-    max-width: 45%;
-  }
-  #contacto .card-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100vw;
-    max-width: 100%;
-  }
-  .contact-card a p {
-    margin: 0;
-    display: none;
-  }
-
-  .card-icon {
-    font-size: 5rem;
-  }
-
-  .card-text p {
-    font-weight: 600;
-    font-size: 2rem;
-  }
-
-  .email {
-    font-weight: 600;
-    font-size: 1.6rem;
-  }
-
-  .link-button {
-    font-size: 2.8rem;
-  }
-
-  .scroll-dots {
-    right: 15px;
-  }
-}
-
-/* MÓVILES <=767px */
 @media (max-width: 767px) {
-  #intro img {
-    width: 100%;
-  }
-
   #intro h1 {
     font-size: 2rem;
   }
+
   #intro p {
     font-size: 1.5rem;
   }
@@ -441,65 +277,15 @@ text-decoration: none;}
   #sobre-mi img {
     width: 60px;
   }
-
-  #sobre-mi a {
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin: 40px;
-    padding: 16px 26px;
-  }
-
-  .trabajo {
-    max-width: 45%;
-  }
-  .contact-card a p {
-    margin: 0;
-    display: none;
-  }
-  .card-icon {
-    font-size: 2.5rem;
-  }
-
-  .card-text p {
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-
-  .email {
-    font-weight: 600;
-    font-size: 0.72rem;
-  }
-
-  .link-button {
-    font-size: 1.2rem;
-  }
-
-  .scroll-dots {
-    right: 10px;
-  }
 }
 
 /* ==============================
-   ENLACES HOVER
+   HOVERS GENERALES
 ============================== */
 a {
-  transition: background 0.3s, filter 0.3s;
-}
-
-a:hover {
-  filter: brightness(0.8);
-}
-
-a img {
   transition: filter 0.3s;
 }
 
-a:hover img {
-  filter: brightness(0.8);
-}
-
-.link-button:hover,
-#sobre-mi a:hover button {
-  background: #17aabf;
-  filter: brightness(0.9);
+a:hover {
+  filter: brightness(0.85);
 }
