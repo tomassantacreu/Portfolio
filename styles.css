@@ -188,6 +188,7 @@ body {
 }
 #contacto {
   justify-content: flex-start;
+  padding-top: 20dvh;
 }
 
 /* ==============================
