@@ -186,6 +186,9 @@ body {
 .card-icon {
   width: 32px;
 }
+#contacto {
+  justify-content: flex-start;
+}
 
 /* ==============================
    SCROLL DOTS
