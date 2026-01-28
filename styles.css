@@ -50,7 +50,8 @@ body {
   box-sizing: border-box;
   text-align: center;
 
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  line-height: 1.45;
   color: #fff;
 
   background: url("/images/w.svg") no-repeat center;
@@ -71,10 +72,16 @@ body {
 }
 
 #intro h1 {
+  font-size: clamp(2rem, 8vw, 4rem);
   background: linear-gradient(90deg, #8cc5ff, #0b56a7, #8cc5ff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#intro p {
+  font-size: clamp(1.1rem, 5vw, 1.5rem);
+  line-height: 1.4;
 }
 
 /* ==============================
@@ -83,6 +90,8 @@ body {
 #sobre-mi p {
   margin: 10px 0;
   max-width: 700px;
+  font-size: clamp(1rem, 4vw, 1.4rem);
+  line-height: 1.5;
 }
 
 #sobre-mi div {
@@ -94,7 +103,7 @@ body {
 }
 
 #sobre-mi img {
-  width: 50px;
+  width: clamp(50px, 8vw, 80px);
 }
 
 #sobre-mi a {
@@ -139,8 +148,13 @@ body {
 /* ==============================
    CONTACTO
 ============================== */
+#contacto {
+  justify-content: flex-start;
+}
+
 #contacto h1 {
   margin-bottom: 1.5rem;
+  font-size: clamp(1.8rem, 6vw, 3rem);
 }
 
 .card-container {
@@ -178,16 +192,13 @@ body {
 
 .contact-card p {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: clamp(1.1rem, 4vw, 1.75rem);
   font-weight: 600;
   color: #fff;
 }
 
 .card-icon {
   width: 32px;
-}
-#contacto {
-  justify-content: flex-start;
 }
 
 /* ==============================
@@ -196,7 +207,7 @@ body {
 .scroll-dots {
   position: fixed;
   top: 50%;
-  right: 25px;
+  right: 10px;
   transform: translateY(-50%);
 
   display: flex;
@@ -229,22 +240,6 @@ body {
     background-size: 60%;
   }
 
-  #intro h1 {
-    font-size: 4rem;
-  }
-
-  #intro p {
-    font-size: 2.3rem;
-  }
-
-  #sobre-mi p {
-    font-size: 1.7rem;
-  }
-
-  #sobre-mi img {
-    width: 80px;
-  }
-
   .trabajo {
     max-width: 24%;
   }
@@ -258,26 +253,6 @@ body {
 
   .contact-card {
     width: 30%;
-
-  }
-}
-
-@media (max-width: 767px) {
-  #intro h1 {
-    font-size: 2rem;
-  }
-
-  #intro p {
-    font-size: 1.5rem;
-  }
-
-  #sobre-mi p {
-    font-size: 1.4rem;
-    max-width: 95%;
-  }
-
-  #sobre-mi img {
-    width: 60px;
   }
 }
 
