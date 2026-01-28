@@ -255,6 +255,29 @@ body {
     width: 30%;
   }
 }
+/* ==============================
+   BOTONES / CTAs
+============================== */
+#sobre-mi a {
+  font-size: 1.1rem; /* tamaño fijo, legible */
+}
+
+/* Cards de contacto */
+.contact-card p {
+  font-size: 1.4rem; /* CTA claro en mobile */
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  #sobre-mi a {
+    font-size: 1.2rem;
+  }
+
+  .contact-card p {
+    font-size: 1.75rem;
+  }
+}
+
 
 /* ==============================
    HOVERS GENERALES
