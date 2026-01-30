@@ -289,3 +289,166 @@ a {
 a:hover {
   filter: brightness(0.85);
 }
+/* ==============================
+   HERO GLOW EFFECT
+============================== */
+
+#intro {
+  position: relative;
+}
+
+#intro img {
+  position: relative;
+  z-index: 2;
+}
+
+/* Glow detrás del logo */
+#intro::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(
+    circle,
+    rgba(140, 197, 255, 0.45) 0%,
+    rgba(140, 197, 255, 0.25) 30%,
+    rgba(140, 197, 255, 0.1) 55%,
+    transparent 70%
+  );
+  filter: blur(35px);
+  border-radius: 50%;
+
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 1;
+  animation: glow-breath 5s ease-in-out infinite;
+}
+
+/* Animación breathing */
+@keyframes glow-breath {
+  0% {
+    transform: translateX(-50%) scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(0.9);
+    opacity: 0.6;
+  }
+}
+/* ==============================
+   HERO GLOW EFFECT (BREATHING ON / OFF)
+============================== */
+
+#intro {
+  position: relative;
+}
+
+#intro img {
+  position: relative;
+  z-index: 3;
+}
+
+/* Glow principal */
+#intro::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+
+  background: radial-gradient(
+    circle,
+    rgba(140, 197, 255, 0.9) 0%,
+    rgba(23, 170, 191, 0.6) 30%,
+    rgba(11, 86, 167, 0.4) 55%,
+    transparent 72%
+  );
+
+  filter: blur(45px);
+  border-radius: 50%;
+
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+
+  opacity: 0;
+  z-index: 1;
+
+  animation: glow-breath 5s ease-in-out infinite;
+}
+
+/* Halo secundario */
+#intro::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+
+  background: radial-gradient(
+    circle,
+    rgba(140, 197, 255, 0.45) 0%,
+    rgba(11, 86, 167, 0.3) 40%,
+    transparent 75%
+  );
+
+  filter: blur(70px);
+  border-radius: 50%;
+
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+
+  opacity: 0;
+  z-index: 0;
+
+  animation: glow-breath-soft 6.5s ease-in-out infinite;
+}
+
+/* Breathing: apagado → encendido → apagado */
+@keyframes glow-breath {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.9);
+  }
+}
+
+@keyframes glow-breath-soft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #intro::before {
+    width: 260px;
+    height: 260px;
+  }
+
+  #intro::after {
+    width: 340px;
+    height: 340px;
+  }
+}
